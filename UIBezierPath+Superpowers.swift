@@ -120,8 +120,8 @@ extension UIBezierPath {
   ///   will return a slope of `1.0` for any `t`.
   ///   Keep in mind that the y-axis of the iOS coordinate system is inversed.
   ///
-  /// - Parameter t: The
-  /// - Returns: a
+  /// - Parameter t: The fraction
+  /// - Returns: The slope
   func mx_slope(atFractionOfLength t: CGFloat) -> CGFloat {
     if isEmpty {
       return 0
