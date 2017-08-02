@@ -71,6 +71,27 @@ For a given fraction, returns the tangent angle of the path at the point `fracti
 
 <br>
 
+## How it works
+
+The backbone of it all is a function on `CGPath` called `apply(info:, function:)`. This basically lets you iterate
+all elements a given `UIBezierPath` is constructed of.
+
+#### Short aside: 
+`UIBezierPath` and its Cocoa counterpart `NSBezierPath` are descriptions of bezier curves. 
+These curves are basically a clever way of feeding line drawing instructions to computers. 
+Bezier paths are composed of different types of path elements. Each element is either a straight line, quadratic curve or cubic
+curve. At the end of the day, these curves boil down to mathematical functions which allows us to calculate things like
+line lengths, tangent angles, etc.
+If you are interested in more, there is a really well written and easy to understand article on [Wikipedia](https://de.wikipedia.org/wiki/Bézierkurve).
+
+
+What this library does is pull out all elements a path is constructed of and throw some geometric math at them.
+Since the extraction and initial computations are quite expensive, the results are cached internally if possible.
+
+By default however, caching is disabled because - by design - the library lives in an `extension` and not a subclass of `UIBezierPath` and with that come some limitations regarding method overriding, internal vars, etc.
+In order to enable the full superpower, you'll have to call `UIBezierPath.mx_prepare()`. This performs some runtime magic
+under the hood which breaks the chains of `extension` and gives you full access to all features on *any* `UIBezierPath` object.
+
 ## Contributing
 
 Feel free to build upon this project and / or submit a PR anytime.
