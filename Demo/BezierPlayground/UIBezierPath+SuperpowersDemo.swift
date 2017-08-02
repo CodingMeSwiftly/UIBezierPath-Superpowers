@@ -1,5 +1,5 @@
 //
-//  UIBezierPath+CalculationsDemo.swift
+//  UIBezierPath+SuperpowersDemo.swift
 //  BezierPlayground
 //
 //  Created by Maximilian Kraus on 13.07.17.
