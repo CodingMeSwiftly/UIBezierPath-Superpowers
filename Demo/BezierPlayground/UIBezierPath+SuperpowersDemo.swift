@@ -281,6 +281,10 @@ fileprivate struct BezierPathElement {
     self.controlPoints = controlPoints
     
     length = type.calculateLength(from: startPoint, to: endPoint, controlPoints: controlPoints)
+    
+    if length == 0 {
+      length = 0.001
+    }
   }
   
   
