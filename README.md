@@ -28,7 +28,7 @@ Copy `UIBezierPath+Superpowers.swift` to your project and you're good to go.
 The repo includes a demo project which lets you try out the features with different predefined paths.
 Feel free to add your own `svg` files and extend the `Demo` enum respectively.
 
-Note: The demo project was created with Xcode 9 beta 4.
+Note: The demo project was created with Xcode 9.
 
 <br>
 
