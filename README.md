@@ -11,7 +11,7 @@ This library consists of one single file. Gettings started is as easy as copying
 
 ### Prerequisites
 
-Developed with Xcode 9 beta and Swift 4. Tested with Swift 3+. Works with Xcode 8 with some minor adjustments.
+Developed with Xcode 9 and Swift 4. Tested with Swift 3+. Works with Xcode 8 with some minor adjustments.
 
 ```
 Xcode 8+
