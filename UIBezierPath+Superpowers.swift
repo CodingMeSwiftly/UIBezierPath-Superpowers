@@ -227,7 +227,11 @@ fileprivate struct BezierPathElement {
   var pointsLookupTable: [CGPoint]?
   
   var lengthRange: ClosedRange<CGFloat>?
-  var length: CGFloat
+  
+  private let calculatedLength: CGFloat
+  var length: CGFloat {
+    return calculatedLength == 0 ? 1 : calculatedLength
+  }
   
   
   init(type: CGPathElementType, startPoint: CGPoint, endPoint: CGPoint, controlPoints: [CGPoint] = []) {
@@ -236,7 +240,7 @@ fileprivate struct BezierPathElement {
     self.endPoint = endPoint
     self.controlPoints = controlPoints
     
-    length = type.calculateLength(from: startPoint, to: endPoint, controlPoints: controlPoints)
+    calculatedLength = type.calculateLength(from: startPoint, to: endPoint, controlPoints: controlPoints)
   }
   
   
