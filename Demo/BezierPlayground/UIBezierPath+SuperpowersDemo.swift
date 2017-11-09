@@ -515,7 +515,7 @@ fileprivate extension UIBezierPath {
       
       var points: [CGPoint] = []
       
-      while offset <= element.length {
+      while offset < element.length {
         points.append(element.point(at: offset / element.length))
         offset += step
       }
