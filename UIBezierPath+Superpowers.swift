@@ -483,7 +483,12 @@ fileprivate extension UIBezierPath {
       
       offset -= element.length
       
+      if points.isEmpty {
+        points.append(element.point(at: 0.5))
+      }
+      
       element.pointsLookupTable = points
+      
       pathElements[idx] = element
     }
     
