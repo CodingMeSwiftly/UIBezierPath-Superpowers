@@ -17,6 +17,7 @@
 		AB7EEE141F30E27B00FF22D1 /* TangentDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EEE131F30E27B00FF22D1 /* TangentDemoView.swift */; };
 		AB7EEE161F30E28B00FF22D1 /* TangentDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7EEE151F30E28B00FF22D1 /* TangentDemoViewController.swift */; };
 		AB7EEE1C1F30E8DB00FF22D1 /* slope.svg in Resources */ = {isa = PBXBuildFile; fileRef = AB7EEE1B1F30E8D600FF22D1 /* slope.svg */; };
+		AB9433181FB4C3CC00353B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9433171FB4C3CC00353B0A /* LaunchScreen.storyboard */; };
 		ABA2210D1F2C93C8003BE2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7E6071F2C9261000C6732 /* AppDelegate.swift */; };
 		ABA2210E1F2C93C8003BE2B2 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7E6051F2C9261000C6732 /* Demo.swift */; };
 		ABA2210F1F2C93C8003BE2B2 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7E6021F2C9261000C6732 /* DemoListViewController.swift */; };
@@ -26,7 +27,6 @@
 		ABA221151F2C9498003BE2B2 /* chaos.svg in Resources */ = {isa = PBXBuildFile; fileRef = ABF7E6091F2C9261000C6732 /* chaos.svg */; };
 		ABA6A3F61F2D00E3002B40B4 /* MXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6A3F51F2D00E3002B40B4 /* MXViewController.swift */; };
 		ABF7E5E41F2C8DDA000C6732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF7E5E31F2C8DDA000C6732 /* Assets.xcassets */; };
-		ABF7E5E71F2C8DDA000C6732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7E5E51F2C8DDA000C6732 /* LaunchScreen.storyboard */; };
 		ABF7E6011F2C8E60000C6732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF7E6001F2C8E60000C6732 /* Main.storyboard */; };
 		EF996767189A6D21E93CD0AA /* Pods_BezierPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E02405A0623AB5C8A9AA256 /* Pods_BezierPlayground.framework */; };
 /* End PBXBuildFile section */
@@ -44,11 +44,11 @@
 		AB7EEE131F30E27B00FF22D1 /* TangentDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangentDemoView.swift; sourceTree = "<group>"; };
 		AB7EEE151F30E28B00FF22D1 /* TangentDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangentDemoViewController.swift; sourceTree = "<group>"; };
 		AB7EEE1B1F30E8D600FF22D1 /* slope.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = slope.svg; sourceTree = "<group>"; };
+		AB9433171FB4C3CC00353B0A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABA6A3F51F2D00E3002B40B4 /* MXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MXViewController.swift; sourceTree = "<group>"; };
 		ABBC77B21F2EAD45000DFE64 /* UIBezierPath+SuperpowersDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+SuperpowersDemo.swift"; sourceTree = "<group>"; };
 		ABF7E5D91F2C8DDA000C6732 /* BezierPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF7E5E31F2C8DDA000C6732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ABF7E5E61F2C8DDA000C6732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF7E5E81F2C8DDA000C6732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF7E6001F2C8E60000C6732 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ABF7E6021F2C9261000C6732 /* DemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoListViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				AB2D55231F2FE57700D79BA2 /* apeidos.svg */,
 				AB7EEE1B1F30E8D600FF22D1 /* slope.svg */,
 				ABF7E6001F2C8E60000C6732 /* Main.storyboard */,
-				ABF7E5E51F2C8DDA000C6732 /* LaunchScreen.storyboard */,
+				AB9433171FB4C3CC00353B0A /* LaunchScreen.storyboard */,
 				ABF7E5E81F2C8DDA000C6732 /* Info.plist */,
 			);
 			path = BezierPlayground;
@@ -199,12 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7EEE1C1F30E8DB00FF22D1 /* slope.svg in Resources */,
+				AB9433181FB4C3CC00353B0A /* LaunchScreen.storyboard in Resources */,
 				AB31B85C1F30A77800C31F56 /* santa.svg in Resources */,
 				AB2D55241F2FE57D00D79BA2 /* apeidos.svg in Resources */,
 				AB2D55221F2FE47A00D79BA2 /* tan.svg in Resources */,
 				ABA221151F2C9498003BE2B2 /* chaos.svg in Resources */,
 				ABF7E6011F2C8E60000C6732 /* Main.storyboard in Resources */,
-				ABF7E5E71F2C8DDA000C6732 /* LaunchScreen.storyboard in Resources */,
 				ABF7E5E41F2C8DDA000C6732 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,17 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		ABF7E5E51F2C8DDA000C6732 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABF7E5E61F2C8DDA000C6732 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ABF7E5E91F2C8DDA000C6732 /* Debug */ = {
@@ -407,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = Q6GXK9S6TL;
+				DEVELOPMENT_TEAM = 8ZFQWS44V7;
 				INFOPLIST_FILE = BezierPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = Q6GXK9S6TL;
+				DEVELOPMENT_TEAM = 8ZFQWS44V7;
 				INFOPLIST_FILE = BezierPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

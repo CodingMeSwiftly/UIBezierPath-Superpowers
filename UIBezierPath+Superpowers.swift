@@ -552,8 +552,11 @@ fileprivate extension UIBezierPath {
 private var swizzled = false
 
 fileprivate func swizzle(_ c: AnyClass, _ originalSelector: Selector, _ swizzledSelector: Selector) {
-  let originalMethod = class_getInstanceMethod(c, originalSelector)
-  let swizzledMethod = class_getInstanceMethod(c, swizzledSelector)
+  guard
+    let originalMethod = class_getInstanceMethod(c, originalSelector),
+    let swizzledMethod = class_getInstanceMethod(c, swizzledSelector)
+    else { return }
+  
   method_exchangeImplementations(originalMethod, swizzledMethod)
 }
 
