@@ -293,12 +293,17 @@ fileprivate struct BezierPathElement {
 }
 
 
-fileprivate typealias BezierPathElementEnumerator = (CGPathElement) -> Void
+fileprivate typealias CGPathApplierClosure = @convention(block) (CGPathElement) -> Void
 
-fileprivate func applierFunction(info: UnsafeMutableRawPointer?, element: UnsafePointer<CGPathElement>) {
-  let block = info?.assumingMemoryBound(to: BezierPathElementEnumerator.self).pointee
-  block?(element.pointee)
+fileprivate extension CGPath {
+  func apply(closure: CGPathApplierClosure) {
+    self.apply(info: unsafeBitCast(closure, to: UnsafeMutableRawPointer.self)) { (info, element) in
+      let block = unsafeBitCast(info, to: CGPathApplierClosure.self)
+      block(element.pointee)
+    }
+  }
 }
+
 
 fileprivate extension CGAffineTransform {
   /// Whether or not this transform solely consists of a translation.
@@ -348,14 +353,8 @@ fileprivate extension CGPathElementType {
   }
 }
 
+
 fileprivate extension UIBezierPath {
-  func enumeratePathElements(block: @escaping BezierPathElementEnumerator) {
-    var block = block
-    let info = UnsafeMutableRawPointer(&block)
-    
-    cgPath.apply(info: info, function: applierFunction)
-  }
-  
   func extractPathElements() -> [BezierPathElement] {
     if let pathElements = self.mx_pathElements {
       return pathElements
@@ -365,7 +364,7 @@ fileprivate extension UIBezierPath {
     
     var currentPoint: CGPoint = .zero
     
-    enumeratePathElements { element in
+    cgPath.apply { element in
       
       let type = element.type
       let points = element.mx_points
@@ -436,6 +435,7 @@ fileprivate extension UIBezierPath {
     }
     
     var pathElements = extractPathElements()
+    
     let totalPathLength = calculateLength()
     
     var lengthRangeStart: CGFloat = 0
