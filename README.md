@@ -11,7 +11,7 @@ This library consists of one single file. Gettings started is as easy as copying
 
 ### Prerequisites
 
-Developed with Xcode 9 beta and Swift 4. Tested with Swift 3+. Works with Xcode 8 with some minor adjustments.
+Developed with Xcode 9 and Swift 4. Tested with Swift 3+. Works with Xcode 8 with some minor adjustments.
 
 ```
 Xcode 8+
@@ -28,7 +28,7 @@ Copy `UIBezierPath+Superpowers.swift` to your project and you're good to go.
 The repo includes a demo project which lets you try out the features with different predefined paths.
 Feel free to add your own `svg` files and extend the `Demo` enum respectively.
 
-Note: The demo project was created with Xcode 9 beta 4.
+Note: The demo project was created with Xcode 9.
 
 <br>
 
