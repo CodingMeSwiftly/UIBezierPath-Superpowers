@@ -52,7 +52,7 @@ extension UIBezierPath {
  /// any of the mx_* methods or properties, you can set the internal variable `swizzled` to `true` without calling
  /// this method. This will result in the caching to be re-activated. Note however, that if you go down
  /// that road and mutate your path objects anyway, the library will base its calculations on the intercal cache
- /// which may not be in synch with the actual path object.
+ /// which may not be in sync with the actual path object.
  static func mx_prepare() {
     if swizzled { return }
   
