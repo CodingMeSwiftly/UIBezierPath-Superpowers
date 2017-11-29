@@ -19,7 +19,7 @@ Swift 3+
 iOS 8+
 ```
 
-### Installing
+### Installation
 
 Copy `UIBezierPath+Superpowers.swift` to your project and you're good to go.
 
