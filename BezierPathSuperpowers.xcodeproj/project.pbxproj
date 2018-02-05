@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3FE2272028CD2500204F4F /* BezierPathSuperpowers.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AB3FE2262028CD2500204F4F /* BezierPathSuperpowers.xcconfig */; };
+		AB3FE2292028CD4600204F4F /* UniversalFramework.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = AB3FE2282028CD4600204F4F /* UniversalFramework.xcconfig */; };
 		ABC205A42023293400071717 /* BezierPathSuperpowers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC205A22023291100071717 /* BezierPathSuperpowers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC205A7202329D400071717 /* BezierPath+Superpowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A6202329D400071717 /* BezierPath+Superpowers.swift */; };
 		ABC205AA20232F2E00071717 /* CalculationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A920232F2E00071717 /* CalculationSettings.swift */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3FE2262028CD2500204F4F /* BezierPathSuperpowers.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BezierPathSuperpowers.xcconfig; sourceTree = "<group>"; };
+		AB3FE2282028CD4600204F4F /* UniversalFramework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework.xcconfig; sourceTree = "<group>"; };
 		ABC205892023286A00071717 /* BezierPathSuperpowers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BezierPathSuperpowers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC205A22023291100071717 /* BezierPathSuperpowers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathSuperpowers.h; sourceTree = "<group>"; };
 		ABC205A32023291100071717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,9 +46,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB3FE2252028CD0700204F4F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AB3FE2262028CD2500204F4F /* BezierPathSuperpowers.xcconfig */,
+				AB3FE2282028CD4600204F4F /* UniversalFramework.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		ABC2057F2023286A00071717 = {
 			isa = PBXGroup;
 			children = (
+				AB3FE2252028CD0700204F4F /* Config */,
 				ABC205A12023291100071717 /* BezierPathSuperpowers */,
 				ABC205B120235DF500071717 /* BezierPathSuperpowersTests */,
 				ABC2058A2023286A00071717 /* Products */,
@@ -173,6 +187,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3FE2272028CD2500204F4F /* BezierPathSuperpowers.xcconfig in Resources */,
+				AB3FE2292028CD4600204F4F /* UniversalFramework.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +224,7 @@
 /* Begin XCBuildConfiguration section */
 		ABC2058F2023286A00071717 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3FE2262028CD2500204F4F /* BezierPathSuperpowers.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -268,6 +285,7 @@
 		};
 		ABC205902023286A00071717 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3FE2262028CD2500204F4F /* BezierPathSuperpowers.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -321,6 +339,7 @@
 		};
 		ABC205922023286A00071717 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3FE2282028CD4600204F4F /* UniversalFramework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -334,6 +353,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.BezierPathSuperpowers;
 				PRODUCT_NAME = BezierPathSuperpowers;
 				SKIP_INSTALL = YES;
@@ -346,6 +366,7 @@
 		};
 		ABC205932023286A00071717 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3FE2282028CD4600204F4F /* UniversalFramework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";

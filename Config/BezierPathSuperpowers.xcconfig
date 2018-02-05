@@ -1,0 +1,14 @@
+//
+//  BezierPathSuperpowers.xcconfig
+//  BezierPathSuperpowers
+//
+//  Created by Maximilian Kraus on 05.02.18.
+//  Copyright © 2018 Maximilian Kraus. All rights reserved.
+//
+
+#include "UniversalFramework.xcconfig"
+
+IPHONEOS_DEPLOYMENT_TARGET = 9.0
+MACOSX_DEPLOYMENT_TARGET = 10.11
+TVOS_DEPLOYMENT_TARGET = 9.0
+WATCHOS_DEPLOYMENT_TARGET = 2.0
