@@ -6,7 +6,7 @@
 //  Copyright © 2018 Maximilian Kraus. All rights reserved.
 //
 
-#if os(iOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 import UIKit
 fileprivate typealias BezierPath = UIBezierPath
 #elseif os(OSX)
@@ -293,7 +293,7 @@ fileprivate extension CGAffineTransform {
 
 
 //  Extraction of points
-#if os(iOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
   
 fileprivate typealias CGPathApplierClosure = @convention(block) (CGPathElement) -> Void
 
@@ -399,7 +399,7 @@ fileprivate extension BezierPath {
       currentPoint = endPoint
     }
     
-#if os(iOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
   
     cgPath.apply { element in
       let operation = element.type.asOperation
@@ -585,7 +585,7 @@ private var swizzled = false
 
 fileprivate extension BezierPath {
   static var swizzlingPairs: [(Selector, Selector)] {
-    #if os(iOS)
+    #if os(iOS) || os(watchOS) || os(tvOS)
       return [
         //  Shared
         (#selector(addLine), #selector(mx_addLine)),
@@ -655,7 +655,7 @@ fileprivate func swizzle(_ hostClass: AnyClass, _ selectorPair: (Selector, Selec
 
 fileprivate extension BezierPath {
   //  iOS specific methods
-#if os(iOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
   @objc func mx_addQuadCurve(to endPoint: CGPoint, controlPoint: CGPoint) {
     mx_addQuadCurve(to: endPoint, controlPoint: controlPoint)
   

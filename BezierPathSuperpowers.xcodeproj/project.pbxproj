@@ -8,28 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		ABC205A42023293400071717 /* BezierPathSuperpowers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC205A22023291100071717 /* BezierPathSuperpowers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ABC205A52023293400071717 /* BezierPathSuperpowers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC205A22023291100071717 /* BezierPathSuperpowers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABC205A7202329D400071717 /* BezierPath+Superpowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A6202329D400071717 /* BezierPath+Superpowers.swift */; };
-		ABC205A8202329D400071717 /* BezierPath+Superpowers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A6202329D400071717 /* BezierPath+Superpowers.swift */; };
 		ABC205AA20232F2E00071717 /* CalculationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A920232F2E00071717 /* CalculationSettings.swift */; };
-		ABC205AB20232F2E00071717 /* CalculationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205A920232F2E00071717 /* CalculationSettings.swift */; };
 		ABC205B320235DF500071717 /* BezierPathSuperpowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC205B220235DF500071717 /* BezierPathSuperpowersTests.swift */; };
-		ABC205B520235DF500071717 /* BezierPathSuperpowers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC20599202328C000071717 /* BezierPathSuperpowers.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		ABC205B620235DF500071717 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ABC205802023286A00071717 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ABC20598202328C000071717;
-			remoteInfo = BezierPathSuperpowers_Mac;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		ABC205892023286A00071717 /* BezierPathSuperpowers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BezierPathSuperpowers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABC20599202328C000071717 /* BezierPathSuperpowers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BezierPathSuperpowers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC205A22023291100071717 /* BezierPathSuperpowers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierPathSuperpowers.h; sourceTree = "<group>"; };
 		ABC205A32023291100071717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABC205A6202329D400071717 /* BezierPath+Superpowers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BezierPath+Superpowers.swift"; sourceTree = "<group>"; };
@@ -47,18 +32,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABC20595202328C000071717 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ABC205AD20235DF500071717 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC205B520235DF500071717 /* BezierPathSuperpowers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				ABC205892023286A00071717 /* BezierPathSuperpowers.framework */,
-				ABC20599202328C000071717 /* BezierPathSuperpowers.framework */,
 				ABC205B020235DF500071717 /* BezierPathSuperpowersTests.xctest */,
 			);
 			name = Products;
@@ -115,14 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABC20596202328C000071717 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABC205A52023293400071717 /* BezierPathSuperpowers.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -144,24 +112,6 @@
 			productReference = ABC205892023286A00071717 /* BezierPathSuperpowers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		ABC20598202328C000071717 /* BezierPathSuperpowers_Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ABC2059E202328C000071717 /* Build configuration list for PBXNativeTarget "BezierPathSuperpowers_Mac" */;
-			buildPhases = (
-				ABC20594202328C000071717 /* Sources */,
-				ABC20595202328C000071717 /* Frameworks */,
-				ABC20596202328C000071717 /* Headers */,
-				ABC20597202328C000071717 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BezierPathSuperpowers_Mac;
-			productName = BezierPathSuperpowers_Mac;
-			productReference = ABC20599202328C000071717 /* BezierPathSuperpowers.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		ABC205AF20235DF500071717 /* BezierPathSuperpowersTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABC205B820235DF500071717 /* Build configuration list for PBXNativeTarget "BezierPathSuperpowersTests" */;
@@ -173,7 +123,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				ABC205B720235DF500071717 /* PBXTargetDependency */,
 			);
 			name = BezierPathSuperpowersTests;
 			productName = BezierPathSuperpowersTests;
@@ -191,11 +140,6 @@
 				ORGANIZATIONNAME = "Maximilian Kraus";
 				TargetAttributes = {
 					ABC205882023286A00071717 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-					};
-					ABC20598202328C000071717 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
@@ -219,7 +163,6 @@
 			projectRoot = "";
 			targets = (
 				ABC205882023286A00071717 /* BezierPathSuperpowers */,
-				ABC20598202328C000071717 /* BezierPathSuperpowers_Mac */,
 				ABC205AF20235DF500071717 /* BezierPathSuperpowersTests */,
 			);
 		};
@@ -227,13 +170,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		ABC205872023286A00071717 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ABC20597202328C000071717 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,15 +195,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ABC20594202328C000071717 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ABC205AB20232F2E00071717 /* CalculationSettings.swift in Sources */,
-				ABC205A8202329D400071717 /* BezierPath+Superpowers.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ABC205AC20235DF500071717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,14 +204,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ABC205B720235DF500071717 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ABC20598202328C000071717 /* BezierPathSuperpowers_Mac */;
-			targetProxy = ABC205B620235DF500071717 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ABC2058F2023286A00071717 /* Debug */ = {
@@ -418,9 +337,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.BezierPathSuperpowers;
 				PRODUCT_NAME = BezierPathSuperpowers;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator watchos appletvos watchsimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 			};
 			name = Debug;
 		};
@@ -442,59 +362,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.BezierPathSuperpowers;
 				PRODUCT_NAME = BezierPathSuperpowers;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator watchos appletvos watchsimulator";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		ABC2059F202328C000071717 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8ZFQWS44V7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = BezierPathSuperpowers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.BezierPathSuperpowers-Mac";
-				PRODUCT_NAME = BezierPathSuperpowers;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		ABC205A0202328C000071717 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8ZFQWS44V7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = BezierPathSuperpowers/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mx.BezierPathSuperpowers-Mac";
-				PRODUCT_NAME = BezierPathSuperpowers;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 			};
 			name = Release;
 		};
@@ -511,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.BezierPathSuperpowersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx appletvos watchos iphoneos appletvsimulator watchsimulator iphonesimulator";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -528,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mx.BezierPathSuperpowersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx appletvos watchos iphoneos appletvsimulator watchsimulator iphonesimulator";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -549,15 +421,6 @@
 			buildConfigurations = (
 				ABC205922023286A00071717 /* Debug */,
 				ABC205932023286A00071717 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ABC2059E202328C000071717 /* Build configuration list for PBXNativeTarget "BezierPathSuperpowers_Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ABC2059F202328C000071717 /* Debug */,
-				ABC205A0202328C000071717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
