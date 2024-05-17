@@ -340,7 +340,7 @@ fileprivate struct BezierPathElement {
 fileprivate typealias CGPathApplierClosure = @convention(block) (CGPathElement) -> Void
 
 fileprivate extension CGPath {
-  func apply(closure: CGPathApplierClosure) {
+  func apply(closure: @escaping CGPathApplierClosure) {
     self.apply(info: unsafeBitCast(closure, to: UnsafeMutableRawPointer.self)) { (info, element) in
       let block = unsafeBitCast(info, to: CGPathApplierClosure.self)
       block(element.pointee)
