@@ -33,7 +33,7 @@ fileprivate let perpendicularCalculationPrecision: PerpendicularCalculationPreci
 
 
 //MARK: - Public API
-extension UIBezierPath {
+public extension UIBezierPath {
   
  /// Call this method once to enable this extension to automatically handle path mutations.
  /// Sadly, Swift does not allow us to utilize the `load` or `initialize` methods anymore, which
