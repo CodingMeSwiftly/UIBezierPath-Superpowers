@@ -33,8 +33,8 @@ fileprivate let perpendicularCalculationPrecision: PerpendicularCalculationPreci
 
 
 //MARK: - Public API
-extension UIBezierPath {
-  
+@MainActor public extension UIBezierPath {
+
  /// Call this method once to enable this extension to automatically handle path mutations.
  /// Sadly, Swift does not allow us to utilize the `load` or `initialize` methods anymore, which
  /// could do this automatically for you, so you have to do it manually. Sorry.
@@ -53,9 +53,9 @@ extension UIBezierPath {
  /// this method. This will result in the caching to be re-activated. Note however, that if you go down
  /// that road and mutate your path objects anyway, the library will base its calculations on the intercal cache
  /// which may not be in sync with the actual path object.
- static func mx_prepare() {
+ @MainActor static func mx_prepare() {
     if swizzled { return }
-  
+
     let swizzlingPairs: [(Selector, Selector)] = [
       (#selector(UIBezierPath.addLine), #selector(UIBezierPath.mx_addLine)),
       (#selector(UIBezierPath.addCurve), #selector(UIBezierPath.mx_addCurve)),
@@ -296,7 +296,7 @@ fileprivate struct BezierPathElement {
 fileprivate typealias CGPathApplierClosure = @convention(block) (CGPathElement) -> Void
 
 fileprivate extension CGPath {
-  func apply(closure: CGPathApplierClosure) {
+  func apply(closure: @escaping CGPathApplierClosure) {
     self.apply(info: unsafeBitCast(closure, to: UnsafeMutableRawPointer.self)) { (info, element) in
       let block = unsafeBitCast(info, to: CGPathApplierClosure.self)
       block(element.pointee)
@@ -336,6 +336,8 @@ fileprivate extension CGPathElementType {
       return 3
     case .closeSubpath:
       return 0
+    @unknown default:
+        fatalError()
     }
   }
   
@@ -349,12 +351,14 @@ fileprivate extension CGPathElementType {
       return from.quadCurveLength(to: to, controlPoint: controlPoints[0])
     case .addCurveToPoint:
       return from.cubicCurveLength(to: to, controlPoint1: controlPoints[0], controlPoint2: controlPoints[1])
+    @unknown default:
+        fatalError()
     }
   }
 }
 
 
-fileprivate extension UIBezierPath {
+@MainActor fileprivate extension UIBezierPath {
   func extractPathElements() -> [BezierPathElement] {
     if let pathElements = self.mx_pathElements {
       return pathElements
@@ -384,6 +388,8 @@ fileprivate extension UIBezierPath {
         controlPoints.append(contentsOf: points[0...1])
       case .closeSubpath:
         break
+      @unknown default:
+          fatalError()
       }
       
       if type != .closeSubpath && type != .moveToPoint {
@@ -504,12 +510,12 @@ fileprivate extension UIBezierPath {
 
 
 //MARK: - Black magic
-fileprivate var pathElementsKey = "mx_pathElements_key"
-fileprivate var pathLengthKey = "mx_pathLength_key"
-fileprivate var pathElementsLengthRangesCalculated = "mx_pathElementsLengthRangesCalculated_key"
-fileprivate var pathElementsPointLookupTableCalculated = "mx_pathElementsPointLookupTableCalculated_key"
+@MainActor fileprivate var pathElementsKey = "mx_pathElements_key"
+@MainActor fileprivate var pathLengthKey = "mx_pathLength_key"
+@MainActor fileprivate var pathElementsLengthRangesCalculated = "mx_pathElementsLengthRangesCalculated_key"
+@MainActor fileprivate var pathElementsPointLookupTableCalculated = "mx_pathElementsPointLookupTableCalculated_key"
 
-fileprivate extension UIBezierPath {
+@MainActor fileprivate extension UIBezierPath {
   var mx_pathElements: [BezierPathElement]? {
     get {
       return objc_getAssociatedObject(self, &pathElementsKey) as? [BezierPathElement]
@@ -558,7 +564,7 @@ fileprivate extension UIBezierPath {
 
 //MARK: - Swizzled selectors
 //  dispatch_once is no longer available in Swift -.-
-private var swizzled = false
+@MainActor private var swizzled = false
 
 fileprivate func swizzle(_ c: AnyClass, _ originalSelector: Selector, _ swizzledSelector: Selector) {
   guard
@@ -569,7 +575,7 @@ fileprivate func swizzle(_ c: AnyClass, _ originalSelector: Selector, _ swizzled
   method_exchangeImplementations(originalMethod, swizzledMethod)
 }
 
-fileprivate extension UIBezierPath {
+@MainActor fileprivate extension UIBezierPath {
   @objc func mx_addLine(to point: CGPoint) {
     mx_addLine(to: point)
     
