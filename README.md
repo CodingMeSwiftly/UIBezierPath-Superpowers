@@ -114,4 +114,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * [paulwrightapps](http://www.paulwrightapps.com/blog/2014/9/4/finding-the-position-and-angle-of-points-along-a-bezier-curve-on-ios)
-* [ericasadum](http://ericasadun.com/2013/03/25/calculating-bezier-points/)
+* [ericasadun](http://ericasadun.com/2013/03/25/calculating-bezier-points/)
